@@ -1,12 +1,11 @@
 ## installations...
 
-install.packages("remotes")
 
-require(remotes)
-remotes::install_github("sje30/sjedrp")
-remotes::install_github("sje30/sjedmin")
-remotes::install_github("sje30/sjevor")
-remotes::install_github("sje30/sjedist")
+require(devtools)
+install_github("sje30/sjedrp")
+install_github("sje30/sjedmin")
+install_github("sje30/sjevor")
+install_github("sje30/sjedist")
 
 ## regular CRAN packages
 install.packages("spatstat")
