@@ -29,3 +29,6 @@ clean:
 	rm -f $(FIGURES) $(SIMULATIONS)
 
 
+rescience-hor.pdf: rescience-hor.Rmd $(FIGURES)
+	Rscript -e "rmarkdown::render('rescience-hor.Rmd')"
+
