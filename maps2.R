@@ -3,8 +3,10 @@ library(sjedist)
 ## This file draws the maps; see hor_bdmin.R for the code that
 ## runs the simulations.
 
+source('extra.R')
+
 ##load("fa.Rda")  ## version for paper.
-load('fa_csn.Rda')
+load('fa_1.Rda')
 
 load("fb_1.Rda")
 load("fc_1.Rda")
