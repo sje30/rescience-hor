@@ -3,11 +3,11 @@ library(sjedist)
 ## This file draws the maps; see hor_bdmin.R for the code that
 ## runs the simulations.
 
-load("fa.Rda")  ## version for paper.
+##load("fa.Rda")  ## version for paper.
 load('fa_csn.Rda')
 
-load("fb.Rda")
-load("fc.Rda")
+load("fb_1.Rda")
+load("fc_1.Rda")
 
 
 
@@ -42,21 +42,23 @@ real.sim.plot <- function(fit, name, soma.rad=2, bar,
 
 }
 
-postscript("hor_fieldA.ps", width=inch(17), height=inch(8.3),
-           horiz=F, onefile=F)
-par(mar=c(0.1,.1,.1,.1), bty='n', mfrow=c(1,2))
-real.sim.plot(fa.fit, name='', soma.rad=5, bar=c(50, 30, 100))
-dev.off()
 
-postscript("|psfbb > hor_fieldA_csn.ps", width=inch(17), height=inch(8),
-           horiz=F, onefile=F)
-par(mar=c(0.1,.1,1.1,.1), bty='n', mfrow=c(1,2))
-real.sim.plot(fa.fit, name='', soma.rad=5, bar=c(50, 30, 100))
-legend(x=-80, y=325, c('H1', 'H2'), pch=c(1,19), cex=0.7,
-       horiz=FALSE, xpd=NA)
-text(grconvertX(c(0.07, 0.57), from='ndc'), grconvertY(rep(0.93,2), from='ndc'),
-     c('A', 'B'), xpd=NA)
-dev.off()
+## [2020-04-29 Wed] -- no need for old postcript now.
+## postscript("hor_fieldA.ps", width=inch(17), height=inch(8.3),
+##            horiz=F, onefile=F)
+## par(mar=c(0.1,.1,.1,.1), bty='n', mfrow=c(1,2))
+## real.sim.plot(fa.fit, name='', soma.rad=5, bar=c(50, 30, 100))
+## dev.off()
+
+## postscript("|psfbb > hor_fieldA_csn.ps", width=inch(17), height=inch(8),
+##            horiz=F, onefile=F)
+## par(mar=c(0.1,.1,1.1,.1), bty='n', mfrow=c(1,2))
+## real.sim.plot(fa.fit, name='', soma.rad=5, bar=c(50, 30, 100))
+## legend(x=-80, y=325, c('H1', 'H2'), pch=c(1,19), cex=0.7,
+##        horiz=FALSE, xpd=NA)
+## text(grconvertX(c(0.07, 0.57), from='ndc'), grconvertY(rep(0.93,2), from='ndc'),
+##      c('A', 'B'), xpd=NA)
+## dev.off()
 
 ## make colour version for a talk.
 
@@ -67,29 +69,30 @@ real.sim.plot(fa.fit, name='', soma.rad=5, bar=c(50, 30, 100),
               bg.h1="green", bg.h2="orangered")
 dev.off()
 
-postscript("hor_fieldA_pair.ps", width=inch(17), height=inch(8.3),
-           horiz=F, onefile=F)
-par(mar=c(0.1,.1,.1,.1), bty='n', mfrow=c(1,2))
-real.sim.plot(fa.fit, name='', soma.rad=5, bar=c(50, 30, 100))
-##text(228, 328, 'hello')
-text(242, 343, 'X', cex=0.7)
-dev.off()
+## postscript("hor_fieldA_pair.ps", width=inch(17), height=inch(8.3),
+##            horiz=F, onefile=F)
+## par(mar=c(0.1,.1,.1,.1), bty='n', mfrow=c(1,2))
+## real.sim.plot(fa.fit, name='', soma.rad=5, bar=c(50, 30, 100))
+## ##text(228, 328, 'hello')
+## text(242, 343, 'X', cex=0.7)
+## dev.off()
 
 ######################################################################
 ## Draw maps across 2 columns?
-postscript("hor_maps2.ps", width=6.7, height=5, horiz=F, onefile=F)
-par(mfcol=c(2,3), mar=c(0.1,.1,1,.1),bty='o')
+## postscript("hor_maps2.ps", width=6.7, height=5, horiz=F, onefile=F)
+## par(mfcol=c(2,3), mar=c(0.1,.1,1,.1),bty='o')
 
-real.sim.plot(fa.fit, name='A', bar=c(50, 20, 100))
-real.sim.plot(fb.fit, name='B', bar=c(30,-10, 100))
-real.sim.plot(fc.fit, name='C', bar=c(80, 40, 100))
-dev.off()
+## real.sim.plot(fa.fit, name='A', bar=c(50, 20, 100))
+## real.sim.plot(fb.fit, name='B', bar=c(30,-10, 100))
+## real.sim.plot(fc.fit, name='C', bar=c(80, 40, 100))
+## dev.off()
 
 
 
 ## Draw maps across 1 column.
 
-postscript("hor_maps3.ps", title='hor maps', width=3.2, height=7, horiz=F, onefile=F)
+## SJE - [2020-04-29 Wed] update for pdf, not postscript()
+pdf("hor_maps3.pdf", title='hor maps', width=3.2, height=7, onefile=F)
 
 ## bty='n' usefl for showing bounding box of plot region.
 par(mar=c(0.1,.1,1,.1),bty='n')
@@ -103,24 +106,24 @@ dev.off()
 
 
 
-postscript("hor_maps4.ps", title='hor maps', width=6.7, height=3.5, horiz=F, onefile=F)
-## bty='n' usefl for showing bounding box of plot region.
-par(mar=c(0.1,.1,1,.1),bty='n')
-##par(mfrow=c(3,2))
-nf <- layout(matrix( c(1,2, 5, 6,   3, 4, 5,6), 2, 4, byrow=T),
-             widths=c(1, 1, 1.2, 1.2))
-##layout.show(nf)
-real.sim.plot(fa.fit, name='A', bar=c(50, 20, 100))
-real.sim.plot(fb.fit, name='B', bar=c(30,-10, 100))
-real.sim.plot(fc.fit, name='C', bar=c(80, 40, 100))
-dev.off()
+## postscript("hor_maps4.ps", title='hor maps', width=6.7, height=3.5, horiz=F, onefile=F)
+## ## bty='n' usefl for showing bounding box of plot region.
+## par(mar=c(0.1,.1,1,.1),bty='n')
+## ##par(mfrow=c(3,2))
+## nf <- layout(matrix( c(1,2, 5, 6,   3, 4, 5,6), 2, 4, byrow=T),
+##              widths=c(1, 1, 1.2, 1.2))
+## ##layout.show(nf)
+## real.sim.plot(fa.fit, name='A', bar=c(50, 20, 100))
+## real.sim.plot(fb.fit, name='B', bar=c(30,-10, 100))
+## real.sim.plot(fc.fit, name='C', bar=c(80, 40, 100))
+## dev.off()
 
-######################################################################
-## Old code below.
-q()
+## ######################################################################
+## ## Old code below.
+## q()
 
-symbols(x=w00h5.fit$allpar$pts.1[,1], y=w00h5.fit$allpar$pts.1[,2],
-        circles=rep(5, nrow(w00h5.fit$allpar$pts.1)), inch=F)
+## symbols(x=w00h5.fit$allpar$pts.1[,1], y=w00h5.fit$allpar$pts.1[,2],
+##         circles=rep(5, nrow(w00h5.fit$allpar$pts.1)), inch=F)
 
-symbols(x=w00h5.fit$allpar$pts.2[,1], y=w00h5.fit$allpar$pts.2[,2],
-        circles=rep(5, nrow(w00h5.fit$allpar$pts.2)), inch=F, add=T, col='red')
+## symbols(x=w00h5.fit$allpar$pts.2[,1], y=w00h5.fit$allpar$pts.2[,2],
+##         circles=rep(5, nrow(w00h5.fit$allpar$pts.2)), inch=F, add=T, col='red')
