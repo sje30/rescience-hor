@@ -1,0 +1,40 @@
+---
+title: Rproduction of Eglen and Wong (2008)
+author: Stephen J. Eglen
+output:
+  pdf_document:
+    toc: false
+    includes:
+       in_header: preamble.sty
+---
+
+```{r rsetup,eval=TRUE,include=FALSE}
+require(knitr)
+options(width=60)
+opts_chunk$set(cache=FALSE)
+```
+
+# Colour version of Figure 1
+
+\includegraphics{hor_fieldA_col.pdf}
+
+We also made a supplementary figure of all 3 fields.
+
+# Figure 2
+
+\includegraphics{eglen_fig2_col.pdf}
+
+# Figure 3
+
+\includegraphics{eglen_fig3_col.pdf}
+
+
+# Table 2
+
+Key column from table 2 is the rejects column which is shown here:
+
+```{bash, code = readLines("table2-rejects.txt"), eval=FALSE,echo=TRUE}
+```
+
+
+
