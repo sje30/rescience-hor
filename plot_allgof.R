@@ -7,10 +7,10 @@
 ## [2020-04-29 Wed] - copied from ~/papers/2007_bihor/figs/plot_allgof.R
 
 source('bihor_common.R')
-
+source('extra.R')
 
 make.allgof <- function(file) {
-  postscript(file=file, width=inch(17), height=10, horiz=F,onefile=F)
+  pdf(file=file, width=inch(17), height=10, onefile=F)
   ##postscript(file='allgof.ps', width=inch(17), height=6)
   on.exit(dev.off())
   ##mat <- matrix( 1:18, nrow=6, ncol=3)
@@ -79,7 +79,7 @@ load("fc_1.Rda")
 
 #expt.col <- "magenta"
 expt.col <- "green"
-make.allgof('eglen_fig2_col.ps')
+make.allgof('eglen_fig2_col.pdf')
 ##expt.col <- "grey"
 ##make.allgof('eglen_fig2_grey.ps')
 
@@ -115,6 +115,7 @@ make.smallgof <- function(file) {
 
   
 }
+
 
 expt.col <- "green"
 make.smallgof()
