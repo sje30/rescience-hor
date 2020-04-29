@@ -1,5 +1,5 @@
 ---
-title: Rproduction of Eglen and Wong (2008)
+title: Reproduction of Eglen and Wong (2008)
 author: Stephen J. Eglen
 output:
   pdf_document:
