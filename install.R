@@ -1,5 +1,7 @@
 ## installations...
 
+install.packages("remotes")
+
 require(remotes)
 remotes::install_github("sje30/sjedrp")
 remotes::install_github("sje30/sjedmin")
