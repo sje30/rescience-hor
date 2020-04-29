@@ -1,0 +1,12 @@
+Figures should be two columns (17cm) or one column (8.3cm)
+
+hor_bdmin.R -- main file for generating simulations.
+
+maps2.R       -- figure 1
+plot_allgof.R -- figure 2
+plot_nod12.R  -- figure 3
+
+
+Table 2:
+
+Counts for heterotypic rejects are stored in fa_rej.Rda, fb_rej.Rda, fc_rej.Rda
