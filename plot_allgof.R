@@ -73,9 +73,9 @@ make.allgof <- function(file) {
 ## End of functions
 ######################################################################
 
-load("fa.Rda")
-load("fb.Rda")
-load("fc.Rda")
+load("fa_1.Rda")
+load("fb_1.Rda")
+load("fc_1.Rda")
 
 #expt.col <- "magenta"
 expt.col <- "green"
