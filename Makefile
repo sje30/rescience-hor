@@ -8,6 +8,8 @@ $(SIMULATIONS): hor_bdmin.R
 	Rscript $^
 
 
+simulations: $(SIMULATIONS)
+
 FIGURES := hor_fieldA_col.pdf  hor_maps3.pdf eglen_fig2_col.pdf eglen_fig3_col.pdf
 
 all: $(FIGURES)
@@ -25,7 +27,8 @@ eglen_fig3_col.pdf: plot_nod12.R fa_nod12.Rda
 
 
 
-.PHONY: clean
+.PHONY: clean simulations
+
 
 clean:
 	rm -f $(FIGURES)
