@@ -4,6 +4,8 @@
 ## ~/proj/bivariate/james-endaug/Horizontal/horz.bivariate/horz.bdmin.R
 ## Best not to run this in BATCH!!!
 
+## [2020-04-29 Wed] -- copied from ~/papers/2007_bihor/figs/hor_bdmin.R
+
 library(sjedmin)
 library(sjedist)
 library(spatstat)
@@ -59,7 +61,7 @@ make.bivsim <- function(field, allpar) {
 
 par(las=1, bty='n')
 
-load("~/mosaics/data/bivariate_mosaics.Rda")
+load("./bivariate_mosaics.Rda") #TODO -- assume in working directory.
 
 
 ######################################################################
@@ -158,7 +160,7 @@ fc$nreps <- 99                             #number of simulations
 ## Do the runs.
 
 fa.fit <- make.bivsim(field="w00h5",  allpar=fa)
-save(fa.fit, file="fa_csn.Rda")
+save(fa.fit, file="fa_1.Rda")
 
 fb.fit <- make.bivsim(field="w00h7",  allpar=fb)
 save(fb.fit, file="fb_1.Rda")
@@ -198,7 +200,7 @@ rej.a.m.norm <- rej.a.het.m / na.int
 rej.b.m.norm <- rej.b.het.m / nb.int
 rej.c.m.norm <- rej.c.het.m / nc.int
 
-
+sink("table2-rejects.txt")
 cat(sprintf("$%.0f \\pm %.0f$ & %d & %.2f\n",
             rej.a.het.m, rej.a.het.sd, na.int, rej.a.m.norm))
 
@@ -207,6 +209,7 @@ cat(sprintf("$%.0f \\pm %.0f$ & %d & %.2f\n",
 
 cat(sprintf("$%.0f \\pm %.0f$ & %d & %.2f\n",
             rej.c.het.m, rej.c.het.sd, nc.int, rej.c.m.norm))
+sink()
 
 ######################################################################
 ## test fc to see what happens if d2.sd is doubled.  (RI1 can be
@@ -286,9 +289,9 @@ fc.fit <- make.bivsim(field="w78h",  allpar=fc)
 ### 2007-12-28
 ### Do the stats to test if RI(1) > RI(2)
 
-load("fa.Rda")
-load("fb.Rda")
-load("fc.Rda")
+load("fa_1.Rda")
+load("fb_1.Rda")
+load("fc_1.Rda")
 
 fa.ri3 <- fa.fit$dist.arr$get()$ri3
 fa.ri3 <- fb.fit$dist.arr$get()$ri3
@@ -309,23 +312,23 @@ wilcox.test(ri1, ri2)
 ## constraints for type 1 and type 2 are added together!)
 ## 2007-12-28
 
-load("fa_rej.Rda")
-load("fb_rej.Rda")
-load("fc_rej.Rda")
+## load("fa_rej.Rda")
+## load("fb_rej.Rda")
+## load("fc_rej.Rda")
 
-nsweeps <- 10
-rej.a <- fa.fit$rej / nsweeps
-rej.a.hom.m <- mean(rej.a[,1])
-rej.a.hom.sd <- sd(rej.a[,1])
+## nsweeps <- 10
+## rej.a <- fa.fit$rej / nsweeps
+## rej.a.hom.m <- mean(rej.a[,1])
+## rej.a.hom.sd <- sd(rej.a[,1])
 
-rej.b <- fb.fit$rej / nsweeps
-rej.b.hom.m <- mean(rej.b[,1])
-rej.b.hom.sd <- sd(rej.b[,1])
+## rej.b <- fb.fit$rej / nsweeps
+## rej.b.hom.m <- mean(rej.b[,1])
+## rej.b.hom.sd <- sd(rej.b[,1])
 
-rej.c <- fc.fit$rej / nsweeps
-rej.c.hom.m <- mean(rej.c[,1])
-rej.c.hom.sd <- sd(rej.c[,1])
+## rej.c <- fc.fit$rej / nsweeps
+## rej.c.hom.m <- mean(rej.c[,1])
+## rej.c.hom.sd <- sd(rej.c[,1])
 
-na.int <- 187 * 82
-nb.int <- 206 * 86
-nc.int <- 300 * 85
+## na.int <- 187 * 82
+## nb.int <- 206 * 86
+## nc.int <- 300 * 85
