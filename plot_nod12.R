@@ -1,4 +1,5 @@
 ## R CMD BATCH plot_nod12.R
+## [2020-04-29 Wed] - origin ~/papers/2007_bihor/figs/plot_nod12.R
 
 source('bihor_common.R')
 load("fa_nod12.Rda")
