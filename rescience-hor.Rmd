@@ -14,6 +14,48 @@ options(width=60)
 opts_chunk$set(cache=FALSE)
 ```
 
+
+Guidlines to follow for report:
+
+<https://github.com/ReScience/ten-years/blob/master/author-guidelines.md.
+
+# Historical context
+
+## Scientific question
+
+To investigate a problem in neurobiology concerning the relative
+spatial positioning of two types of neuron in the retina.  We used
+three example datasets (pretty much all that was available at the
+time) to investigate this problem using spatial statistics and
+simulations of spatial patterning.  
+
+## Computational context
+
+Most of the code required for the 2008 paper had been developed by
+myself since about 2000 working on other related problems.  The major
+innovation here was in the biological problem.
+
+## Original source code
+
+> About the original source code: Was it published? Was it archived
+> somewhere? Was there a license for it?
+
+No, the source code was kept just on my hard drive.  I keep good
+backups though, and in this case the projects were still in my home
+directory (copied from machine to machine over the years).  No license
+was written systematically to cover the code I wrote, although the R
+packages are usually released under GPL or MIT.
+
+## Retrieval of the software
+
+This was relatively straightforward, as the software was all on my
+harddrive.  As I wanted to make the code all public, not only the code
+relating to this project was hosted on github, but I also decided to
+release the underlying R packages I had written.
+
+
+
+
 # Colour version of Figure 1
 
 \includegraphics{hor_fieldA_col.pdf}
