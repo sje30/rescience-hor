@@ -118,4 +118,4 @@ make.smallgof <- function(file) {
 
 
 expt.col <- "green"
-make.smallgof()
+##make.smallgof()
