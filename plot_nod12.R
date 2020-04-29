@@ -5,7 +5,7 @@ source('bihor_common.R')
 load("fa_nod12.Rda")
 
 make.nod12.plot <- function(file) {
-  postscript(file=file, onefile=FALSE, horizontal=FALSE,
+  pdf(file=file, onefile=FALSE, 
              width=inch(17), height=inch(8.3))
   
   on.exit(dev.off())
@@ -26,6 +26,6 @@ make.nod12.plot <- function(file) {
 }
 
 expt.col <- "green"
-make.nod12.plot('eglen_fig3_col.ps')
+make.nod12.plot('eglen_fig3_col.pdf')
 ## expt.col <- "grey"
 ## make.nod12.plot('eglen_fig3_grey.ps')
