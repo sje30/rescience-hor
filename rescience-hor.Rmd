@@ -169,8 +169,8 @@ Key column from table 2 is the rejects column which is shown here:
 # About this document
 
 This is a reproducible document that you can regenerate within
-mybinder.org by following the instructions at the project home page,
-<http://github.com/sje30/rescience-hor>.
+mybinder.org by following the instructions on the README at the
+project home page, <http://github.com/sje30/rescience-hor>.
 
 If you are not using mybinder.org to recompile the document, then the
 following steps should work to generate the file `rescience-hor.pdf`
@@ -188,6 +188,14 @@ system('make rescience-hor.pdf')
 ```{r}
 sessionInfo()
 ```
+
+# Acknowledgements
+
+I thank the R core team for continuing to provide a robust computing
+environment that gave me confidence that this code was still work
+after 10 years.  Thanks also to Daniel Nüst and the mybinder team for
+helping me learn and use mybinder.
+
 
 \clearpage
 # References
