@@ -176,6 +176,22 @@ recalculated here -- the rejects column is the important column here.
 (Had I known more about generating tables in R at the time, I think
 my R code should have created this entire table.)
 
+
+# Conclusions
+
+It was relatively easy to recompute the results in this report,
+because of the stability of the R environment and its packaging
+system.  Even its binary data format (.Rda) for storing objects was
+reusable over a 10 year timescale.  The largest challenge was the user
+issue of remembering what I had done to run the analysis and generate
+the results.  Using mybinder.org was useful to iron out minor issues
+that others might face trying to run the software on their machine.
+In its current state, the repository requires R and make -- if make is
+unavailable, the scripts would need to be run by hand, which is not
+onerous, but writing them out explicitly might help those unfamilar
+with Make syntax.
+
+
 # About this document
 
 This is a reproducible document that you can regenerate within
