@@ -11,3 +11,6 @@ install.packages("spatstat")
 
 ## for rendering the paper
 install.packages("rmarkdown")
+
+install.packages('tinytex')
+tinytex::install_tinytex()
