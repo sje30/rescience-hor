@@ -40,7 +40,7 @@ spatial positioning of two types of neuron in the retina.  We used
 three example datasets (pretty much all that was available at the
 time) to investigate this problem using spatial statistics and
 simulations of spatial patterning.  These datasets were not available
-in digitial format, but the images [@Wassle1978-cd; @Wassle2000-aa]
+in digital format, but the images [@Wassle1978-cd; @Wassle2000-aa]
 were scanned in and digitised (each cell represented as an x,y
 location) by me as part of the work for the original paper.  These
 datasets were not publicly shared before.
@@ -71,25 +71,25 @@ of mine were made available:
 
 1. sjedmin:  dmin model for spatial point patterns.
    <https://github.com/sje30/sjedmin>
-2. sjedist: unified calculation of spatial stastitics.
+2. sjedist: unified calculation of spatial statistics.
    <https://github.com/sje30/sjedist>
-3. sjevor: Wrapper around public domain code for Voronoi tesselation
+3. sjevor: Wrapper around public domain code for Voronoi tessellation
    <https://github.com/sje30/sjevor>
    
-The Voronoi tesselation was public domain C code provided by Steve
-Fortune [@Fortune1987-kg].  (This cdoe was not required for the current
+The Voronoi tessellation was public domain C code provided by Steve
+Fortune [@Fortune1987-kg].  (This code was not required for the current
 project, but was implicitly required for the parent package, sjedist.)
 
 ## Retrieval of the software
 
 This was relatively straightforward, as the software was all on my
-harddrive.  One complication was that until a few years ago, I had
+hard drive.  One complication was that until a few years ago, I had
 been using RCS as my primary version control software.  As I wished to
 release the packages onto github, I converted the history from RCS into
 Git using the tool `https://github.com/Oblomov/rcs-fast-export`.
 
 
-I anticipated that retrieving teh data might be tricky, as I had used
+I anticipated that retrieving the data might be tricky, as I had used
 R's internal Rda format to efficiently store the data files (they are
 not large, so there was no need to be concerned about efficiency).
 Given that this format could in principle change over time, this might
