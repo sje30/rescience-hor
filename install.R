@@ -12,5 +12,6 @@ install.packages("spatstat")
 ## for rendering the paper
 install.packages("rmarkdown")
 
+## tinytex takes a few minutes to setup, but needed for rendering pdf
 install.packages('tinytex')
 tinytex::install_tinytex()
