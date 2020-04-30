@@ -15,3 +15,12 @@ the file `rescience-hor.pdf`.
 
 
 
+## Note for the Rescience editors
+
+I have used your template to create a cover page for my submission,
+following the yaml file.  I did not yet attempt how to generate a pdf
+from Rmd using your templates.  My article is in
+<template-master/article2.pdf> with
+[metadata](template-master/metadata.yaml).
+
+
