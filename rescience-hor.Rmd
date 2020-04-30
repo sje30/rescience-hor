@@ -188,7 +188,7 @@ the results.  Using mybinder.org was useful to iron out minor issues
 that others might face trying to run the software on their machine.
 In its current state, the repository requires R and make -- if make is
 unavailable, the scripts would need to be run by hand, which is not
-onerous, but writing them out explicitly might help those unfamilar
+onerous, but writing them out explicitly might help those unfamiliar
 with Make syntax.
 
 
