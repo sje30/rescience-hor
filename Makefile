@@ -2,7 +2,8 @@
 FIGURES := hor_fieldA_col.pdf  hor_maps3.pdf eglen_fig2_col.pdf eglen_fig3_col.pdf
 SIMULATIONS:= fa_1.Rda  fa_csn.Rda  fa_nod12.Rda  fb_1.Rda  fc_1.Rda  w78h_t2.sd_16.Rda table2-rejects.txt
 
-all: $(FIGURES)
+all: rescience-hor.pdf
+
 
 $(SIMULATIONS): hor_bdmin.R
 	Rscript $^
