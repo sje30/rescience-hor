@@ -102,9 +102,12 @@ The code ran fine in today's version of R (4.0.0); see end of document
 for the full list of R dependencies.  I did not need to load any
 older versions of libraries.  The code was tested on both my laptop
 (ThinkPad T480s running Manjaro linux) and on <mybinder.org> (see the
-end of this document for mybinder details.)
+end of this document for mybinder details.)   The simulations
+themselves only take a couple of minutes to run.  If recompiling on
+binder, it takes a few more minutes to install all the packages and
+initialise the tex distribution.
 
-However, althoughthe code worked fine, it took me a few minutes to
+However, although the code worked fine, it took me about 20 minutes to
 read through the old scripts and work out what to do, as I had not
 provided a Makefile or similar.
 
