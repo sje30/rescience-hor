@@ -33,7 +33,7 @@ sources for this report.
 
 # Historical context
 
-# Scientific question
+## Scientific question
 
 To investigate a problem in neurobiology concerning the relative
 spatial positioning of two types of neuron in the retina.  We used
@@ -89,7 +89,7 @@ release the packages onto github, I converted the history from RCS into
 Git using the tool `https://github.com/Oblomov/rcs-fast-export`.
 
 
-I anticipated that retrieving the data might be tricky, as I had used
+I anticipated that loading the data might be tricky, as I had used
 R's internal Rda format to efficiently store the data files (they are
 not large, so there was no need to be concerned about efficiency).
 Given that this format could in principle change over time, this might
@@ -101,7 +101,7 @@ have been a problem.  However, R 4.0.0 was able to read in the file
 The code ran fine in today's version of R (4.0.0); see end of document
 for the full list of R dependencies.  I did not need to load any
 older versions of libraries.  The code was tested on both my laptop
-(ThinkPad T480s running Manjaro linux) and on <mybinder.org> (see the
+(ThinkPad T480s running Manjaro linux) and on <https://mybinder.org> (see the
 end of this document for mybinder details.)   The simulations
 themselves only take a couple of minutes to run.  If recompiling on
 binder, it takes a few more minutes to install all the packages and
@@ -146,28 +146,32 @@ would have made sense of the code itself, and all of the parameters
 for the simulations were included in the source files.
 
 
-# Colour version of Figure 1
+# Reproduction of Figure 1
 
 \includegraphics{hor_fieldA_col.pdf}
 
 We also made a supplementary figure of all 3 fields.
 
-# Figure 2
+# Reproduction of Figure 2
 
 \includegraphics{eglen_fig2_col.pdf}
 
-# Figure 3
+# Reproduction of Figure 3
 
 \includegraphics{eglen_fig3_col.pdf}
 
 
-# Table 2
+# Reproduction of Table 2
 
 Key column from table 2 is the rejects column which is shown here:
 
 ```{bash, code = readLines("table2-rejects.txt"), eval=FALSE,echo=TRUE}
 ```
 
+Note the order of the three values is field A, B, C, rather than
+listed in the original paper (Table 2, C, A, B).  The other columns of
+this table were determined statically from the data sets, so were not
+recalculated here -- the rejects column is the important column here.
 
 # About this document
 
