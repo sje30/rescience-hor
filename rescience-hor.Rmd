@@ -1,6 +1,6 @@
 ---
 title: >
-  Reproduction of Eglen and Wong (2008) --- Spatial constraints
+  [Re] Eglen and Wong (2008) --- Spatial constraints
   underlying the retinal mosaics of two types of horizontal cells in
   cat and macaque
 author: Stephen J. Eglen (ORCID 0000-0001-8607-8025)
