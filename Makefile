@@ -24,7 +24,7 @@ eglen_fig3_col.pdf: plot_nod12.R fa_nod12.Rda
 
 
 
-.PHONY: clean simulations
+.PHONY: clean simulations all
 
 clean:
 	rm -f $(FIGURES) $(SIMULATIONS)
