@@ -173,6 +173,9 @@ listed in the original paper (Table 2, C, A, B).  The other columns of
 this table were determined statically from the data sets, so were not
 recalculated here -- the rejects column is the important column here.
 
+(Had I known more about generating tables in R at the time, I think
+my R code should have created this entire table.)
+
 # About this document
 
 This is a reproducible document that you can regenerate within
