@@ -29,7 +29,7 @@ metadata.tex: metadata.yaml
 article.pdf: article.tex content.tex bibliography.bib metadata.tex rescience.cls
 	latexmk -pdf -pdflatex="xelatex -interaction=nonstopmode" -use-make article.tex
 
-article2.pdf: article.pdf
+article2.pdf: article.pdf ../rescience-hor.pdf
 	pdfcat article.pdf ../rescience-hor.pdf > article2.pdf
 clean:
 	@latexmk -CA
