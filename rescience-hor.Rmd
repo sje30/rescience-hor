@@ -18,11 +18,15 @@ options(width=60)
 opts_chunk$set(cache=FALSE)
 ```
 
+## Summary
+
 This paper reports the successful reproduction of the results in a
 paper I co-authored in 2008 [@Eglen2008-ca].  A postprint of this
 paper is available at <https://arxiv.org/abs/1208.0986>.  (Open access
 was not mandated by the funders of this research at the time of
-publication, 2008.)
+publication, 2008.)  All the code has been uploaded to
+<https://github.com/sje30/rescience-hor> along with the Rmarkdown
+sources for this report.
 
 
 <!-- <https://github.com/ReScience/ten-years/blob/master/author-guidelines.md> -->
@@ -119,7 +123,24 @@ generate the figures from the corresponding *.Rda* files.  Finally,
 after the figure pdfs have been generated, this document is compiled
 from its Rmarkdown source.
 
+## Reproduction of results
 
+The results generated closely matched those that were presented in the
+original paper.  As the simulation methods are stochastic (and no seed
+was set for reproducible random number generation), the P values
+reported in Figure 2 do not match those originally reported, nor does
+the simulation field (right hand side of Figure 1) match.  However,
+the statistical properties of the models still match those of the
+experimental data.
+
+## Could someone else reproduce the work?
+
+If I had simply given the R code and packages to someone else, the
+lack of documentation or Makefile would have meant that this person
+would have needed to study the code carefully to work out what files
+were generated.  I would have hoped though that someone fluent with R
+would have made sense of the code itself, and all of the parameters
+for the simulations were included in the source files.
 
 
 # Colour version of Figure 1
