@@ -1,5 +1,4 @@
-## installations...
-
+## Installations
 
 require(devtools)
 install_github("sje30/sjedrp")
