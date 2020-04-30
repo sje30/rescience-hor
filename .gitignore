@@ -1,0 +1,6 @@
+*.pdf
+*.ps
+f*Rda
+table2-rejects.txt
+/w78h_t2.sd_16.Rda
+auto/
