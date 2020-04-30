@@ -19,8 +19,8 @@ the file `rescience-hor.pdf`.
 
 I have used your template to create a cover page for my submission,
 following the yaml file.  I did not yet attempt how to generate a pdf
-from Rmd using your templates.  My article is in
-<template-master/article2.pdf> with
-[metadata](template-master/metadata.yaml).
+from Rmd using your templates.  My
+[article](template-master/article2.pdf) with
+[metadata](template-master/metadata.yaml) are in the template-master folder.
 
 
