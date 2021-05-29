@@ -17,3 +17,5 @@ install_github('rstudio/rmarkdown')
 ## tinytex takes a few minutes to setup, but needed for rendering pdf
 install.packages('tinytex')
 tinytex::install_tinytex()
+
+install.packages('rmarkdown')
