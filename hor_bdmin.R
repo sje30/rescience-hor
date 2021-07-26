@@ -1,9 +1,5 @@
 ## Recreate hor_bdmin fits
 ## 2007-08-21
-## Adapted from
-## ~/proj/bivariate/james-endaug/Horizontal/horz.bivariate/horz.bdmin.R
-## Best not to run this in BATCH!!!
-
 ## [2020-04-29 Wed] -- copied from ~/papers/2007_bihor/figs/hor_bdmin.R
 
 library(sjedmin)
@@ -79,11 +75,6 @@ fa$bpar <- list(steps=seq(from=0, to=40, by=2),
   
 fa$lower <- 5
   
-##t1.dmin <- 22;  t1.sd <- 4
-##t2.dmin <- 45;  t2.sd <- 11
-##t12.dmin <- 11; t12.sd <- 3.0
-
-    
 fa$t1.dmin <- 22;  fa$t1.sd <- 4
 fa$t2.dmin <- 40;  fa$t2.sd <- 10
 fa$t12.dmin <- 11; fa$t12.sd <- 3.0
@@ -109,10 +100,6 @@ fb$bpar <- list(steps=seq(from=0, to=40, by=2),
   
 fb$lower <- 5
   
-fb$t1.dmin <- 21;  fb$t1.sd <- 3.7
-fb$t2.dmin <- 32;  fb$t2.sd <- 7.9
-fb$t12.dmin <- 12; fb$t12.sd <- 2.7
-
 fb$t1.dmin <- 21;  fb$t1.sd <- 4
 fb$t2.dmin <- 32;  fb$t2.sd <- 8
 fb$t12.dmin <- 12; fb$t12.sd <- 2.5
@@ -137,24 +124,12 @@ fc$bpar <- list(steps=seq(from=0, to=100, by=2),
 
 fc$lower <- 5
   
-## t1.dmin <- 49;  t1.sd <- 8.4
-## t2.dmin <- 72;  t2.sd <- 8
-## t12.dmin <- 14; t12.sd <- 3.0
-
-## okay..
-##t1.dmin <- 60;  t1.sd <- 11
-##t2.dmin <- 72;  t2.sd <- 8
-##t12.dmin <- 11; t12.sd <- 3.0
-
 fc$t1.dmin <- 65;  fc$t1.sd <- 12
 fc$t2.dmin <- 72;  fc$t2.sd <- 8
 fc$t12.dmin <- 14; fc$t12.sd <- 3.0
 
-## for t12, (11,3) produces better fit at origin, but reduces the RI
-## of the 1+2 data.
+
 fc$nreps <- 99                             #number of simulations
-
-
 
 ######################################################################
 ## Do the runs.
@@ -227,21 +202,10 @@ fc$bpar <- list(steps=seq(from=0, to=100, by=2),
 
 fc$lower <- 5
   
-## t1.dmin <- 49;  t1.sd <- 8.4
-## t2.dmin <- 72;  t2.sd <- 8
-## t12.dmin <- 14; t12.sd <- 3.0
-
-## okay..
-##t1.dmin <- 60;  t1.sd <- 11
-##t2.dmin <- 72;  t2.sd <- 8
-##t12.dmin <- 11; t12.sd <- 3.0
-
 fc$t1.dmin <- 65;  fc$t1.sd <- 12
 fc$t2.dmin <- 72;  fc$t2.sd <- 16
 fc$t12.dmin <- 14; fc$t12.sd <- 3.0
 
-## for t12, (11,3) produces better fit at origin, but reduces the RI
-## of the 1+2 data.
 fc$nreps <- 99                             #number of simulations
 
 fc.fit <- make.bivsim(field="w78h_t2.sd_16",  allpar=fc)
@@ -265,21 +229,10 @@ fc$bpar <- list(steps=seq(from=0, to=100, by=2),
 
 fc$lower <- 5
   
-## t1.dmin <- 49;  t1.sd <- 8.4
-## t2.dmin <- 72;  t2.sd <- 8
-## t12.dmin <- 14; t12.sd <- 3.0
-
-## okay..
-##t1.dmin <- 60;  t1.sd <- 11
-##t2.dmin <- 72;  t2.sd <- 8
-##t12.dmin <- 11; t12.sd <- 3.0
-
 fc$t2.dmin <- 65;  fc$t2.sd <- 12
 fc$t1.dmin <- 72;  fc$t1.sd <- 8
 fc$t12.dmin <- 14; fc$t12.sd <- 3.0
 
-## for t12, (11,3) produces better fit at origin, but reduces the RI
-## of the 1+2 data.
 fc$nreps <- 99                             #number of simulations
 
 fc.fit <- make.bivsim(field="w78h",  allpar=fc)
@@ -307,28 +260,3 @@ wilcox.test(ri1, ri2)
 ## field c: W =  672, p-value < 2.2e-16
 
 
-######################################################################
-## Examine homotypic constraints (not really pursued, since homotypic
-## constraints for type 1 and type 2 are added together!)
-## 2007-12-28
-
-## load("fa_rej.Rda")
-## load("fb_rej.Rda")
-## load("fc_rej.Rda")
-
-## nsweeps <- 10
-## rej.a <- fa.fit$rej / nsweeps
-## rej.a.hom.m <- mean(rej.a[,1])
-## rej.a.hom.sd <- sd(rej.a[,1])
-
-## rej.b <- fb.fit$rej / nsweeps
-## rej.b.hom.m <- mean(rej.b[,1])
-## rej.b.hom.sd <- sd(rej.b[,1])
-
-## rej.c <- fc.fit$rej / nsweeps
-## rej.c.hom.m <- mean(rej.c[,1])
-## rej.c.hom.sd <- sd(rej.c[,1])
-
-## na.int <- 187 * 82
-## nb.int <- 206 * 86
-## nc.int <- 300 * 85
