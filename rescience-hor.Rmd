@@ -6,6 +6,7 @@ title: >
 author: Stephen J. Eglen (ORCID 0000-0001-8607-8025)
 output:
   pdf_document:
+    keep_tex: true
     toc: false
     includes:
        in_header: preamble.sty
