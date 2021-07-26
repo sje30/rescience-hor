@@ -1,0 +1,465 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\title{{[}Re{]} Eglen and Wong (2008) --- Spatial constraints underlying
+the retinal mosaics of two types of horizontal cells in cat and macaque}
+\author{Stephen J. Eglen (ORCID 0000-0001-8607-8025)}
+\date{}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={{[}Re{]} Eglen and Wong (2008) --- Spatial constraints underlying the retinal mosaics of two types of horizontal cells in cat and macaque},
+  pdfauthor={Stephen J. Eglen (ORCID 0000-0001-8607-8025)},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\usepackage{mathpazo}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{makecell}
+%% \usepackage[a4paper,margin=2cm]{geometry}
+
+
+\newcommand{\orcidlogo}{\textcolor{orcidlogocol}{\aiOrcid}}
+\usepackage[font=Large,labelfont=bf,textfont=bf]{caption}
+\DeclareCaptionLabelFormat{addC}{#1 C#2}
+
+
+%% This solution for adding the ORCID logo was taken from:
+%% https://tex.stackexchange.com/questions/445563/ieeetran-how-to-include-orcid-in-tex-pdf-with-pdflatex/445583
+%% and adapted simply by scaling the icon a little smaller than | to +
+\usepackage{scalerel}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+\definecolor{orcidlogocol}{HTML}{A6CE39}
+\tikzset{
+  orcidlogo/.pic={
+    \fill[orcidlogocol] svg{M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z};
+    \fill[white] svg{M86.3,186.2H70.9V79.1h15.4v48.4V186.2z}
+                 svg{M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z}
+                 svg{M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1C84.2,46.7,88.7,51.3,88.7,56.8z};
+  }
+}
+
+\newcommand\orcidicon[1]{\href{https://orcid.org/#1}{\mbox{\scalerel*{
+\begin{tikzpicture}[yscale=-1,transform shape]
+\pic{orcidlogo};
+\end{tikzpicture}
+}{+}}}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+\hypertarget{summary}{%
+\subsection{Summary}\label{summary}}
+
+This paper reports the successful reproduction of the results in a paper
+I co-authored in 2008 (Eglen and Wong 2008). A postprint of this paper
+is available at \url{https://arxiv.org/abs/1208.0986}. (Open access was
+not mandated by the funders of this research at the time of publication,
+2008.) All the code has been uploaded to
+\url{https://github.com/sje30/rescience-hor} along with the Rmarkdown
+sources for this report.
+
+\hypertarget{historical-context}{%
+\section{Historical context}\label{historical-context}}
+
+\hypertarget{scientific-question}{%
+\subsection{Scientific question}\label{scientific-question}}
+
+To investigate a problem in neurobiology concerning the relative spatial
+positioning of two types of neuron in the retina. We used three example
+datasets (pretty much all that was available at the time) to investigate
+this problem using spatial statistics and simulations of spatial
+patterning. These datasets were not available in digital format, but the
+images (Wässle, Peichl, and Boycott 1978; Wässle et al. 2000) were
+scanned in and digitised (each cell represented as an x,y location) by
+me as part of the work for the original paper. These datasets were not
+publicly shared before.
+
+\hypertarget{computational-context}{%
+\subsection{Computational context}\label{computational-context}}
+
+Most of the code required for the 2008 paper had been developed by
+myself since about 2000 working on other related problems. The major
+innovation here was in the biological problem.
+
+One of the key reasons I switched to R as a programming environment in
+the late 1990s was because of the strong support it had for spatial
+statistics. In particular the SPLANCS package (Rowlingson and Diggle
+2017) in R has been a key package in most of my research.
+
+\hypertarget{original-source-code}{%
+\subsection{Original source code}\label{original-source-code}}
+
+the original source code was not published or publicly archived before.
+The source code was kept just on my hard drive. I keep good backups
+though, and in this case the projects were still in my home directory
+(copied from machine to machine over the years). No license was written
+systematically to cover the code I wrote, although the R packages are
+usually released under GPL or MIT.
+
+As a side-effect of producing this article, the following R packages of
+mine were made available:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  sjedmin: dmin model for spatial point patterns.
+  \url{https://github.com/sje30/sjedmin}
+\item
+  sjedist: unified calculation of spatial statistics.
+  \url{https://github.com/sje30/sjedist}
+\item
+  sjevor: Wrapper around public domain code for Voronoi tessellation
+  \url{https://github.com/sje30/sjevor}
+\end{enumerate}
+
+The Voronoi tessellation was public domain C code provided by Steve
+Fortune (Fortune 1987). (This code was not required for the current
+project, but was implicitly required for the parent package, sjedist.)
+
+\hypertarget{retrieval-of-the-software}{%
+\subsection{Retrieval of the software}\label{retrieval-of-the-software}}
+
+This was relatively straightforward, as the software was all on my hard
+drive. One complication was that until a few years ago, I had been using
+RCS as my primary version control software. As I wished to release the
+packages onto github, I converted the history from RCS into Git using
+the tool \texttt{https://github.com/Oblomov/rcs-fast-export}.
+
+I anticipated that loading the data might be tricky, as I had used R's
+internal Rda format to efficiently store the data files (they are not
+large, so there was no need to be concerned about efficiency). Given
+that this format could in principle change over time, this might have
+been a problem. However, R 4.0.0 was able to read in the file
+\texttt{bivariate\_mosaics.Rda}.
+
+\hypertarget{execution}{%
+\section{Execution}\label{execution}}
+
+The code ran fine in today's version of R (4.0.0); see end of document
+for the full list of R dependencies. I did not need to load any older
+versions of libraries. The code was tested on both my laptop (ThinkPad
+T480s running Manjaro linux) and on \url{https://mybinder.org} (see the
+end of this document for mybinder details.) The simulations themselves
+only take a couple of minutes to run. If recompiling on binder, it takes
+a few more minutes to install all the packages and initialise the tex
+distribution.
+
+However, although the code worked fine, it took me about 20 minutes to
+read through the old scripts and work out what to do, as I had not
+provided a Makefile or similar.
+
+Once the code was running, I only wished to make cosmetic updates to the
+project to modernise it. The most significant change was converting the
+format for figures from postscript to pdf as there is more support for
+the latter. The three figures that were generated are reproduced in this
+paper and can be compared against the figures from the original paper.
+
+A Makefile is provided to help regenerate the simulation results and the
+figures. \emph{make clean} will return the repository to a clean state.
+\emph{make all} will first run the simulations and store the results in
+several \emph{.Rda} files. There are then several R scripts to generate
+the figures from the corresponding \emph{.Rda} files. Finally, after the
+figure pdfs have been generated, this document is compiled from its
+Rmarkdown source.
+
+\hypertarget{reproduction-of-results}{%
+\subsection{Reproduction of results}\label{reproduction-of-results}}
+
+The results generated closely matched those that were presented in the
+original paper. As the simulation methods are stochastic (and no seed
+was set for reproducible random number generation), the P values
+reported in Figure 2 do not match those originally reported, nor does
+the simulation field (right hand side of Figure 1) match. However, the
+statistical properties of the models still match those of the
+experimental data.
+
+\hypertarget{could-someone-else-reproduce-the-work}{%
+\subsection{Could someone else reproduce the
+work?}\label{could-someone-else-reproduce-the-work}}
+
+If I had simply given the R code and packages to someone else, the lack
+of documentation or Makefile would have meant that this person would
+have needed to study the code carefully to work out what files were
+generated. I would have hoped though that someone fluent with R would
+have made sense of the code itself, and all of the parameters for the
+simulations were included in the source files.
+
+\hypertarget{reproduction-of-figure-1}{%
+\section{Reproduction of Figure 1}\label{reproduction-of-figure-1}}
+
+\includegraphics{hor_fieldA_col.pdf}
+
+We also made a supplementary figure of all 3 fields.
+
+\hypertarget{reproduction-of-figure-2}{%
+\section{Reproduction of Figure 2}\label{reproduction-of-figure-2}}
+
+\includegraphics{eglen_fig2_col.pdf}
+
+\hypertarget{reproduction-of-figure-3}{%
+\section{Reproduction of Figure 3}\label{reproduction-of-figure-3}}
+
+\includegraphics{eglen_fig3_col.pdf}
+
+\hypertarget{reproduction-of-table-2}{%
+\section{Reproduction of Table 2}\label{reproduction-of-table-2}}
+
+Key column from table 2 is the rejects column which is shown here:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\VariableTok{$9}\ExtensionTok{37} \DataTypeTok{\textbackslash{}p}\NormalTok{m 36$ }\KeywordTok{\&} \ExtensionTok{15334} \KeywordTok{\&} \ExtensionTok{0.06}
+\VariableTok{$7}\ExtensionTok{202} \DataTypeTok{\textbackslash{}p}\NormalTok{m 300$ }\KeywordTok{\&} \ExtensionTok{17716} \KeywordTok{\&} \ExtensionTok{0.41}
+\VariableTok{$2}\ExtensionTok{42} \DataTypeTok{\textbackslash{}p}\NormalTok{m 10$ }\KeywordTok{\&} \ExtensionTok{25500} \KeywordTok{\&} \ExtensionTok{0.01}
+\end{Highlighting}
+\end{Shaded}
+
+Note the order of the three values is field A, B, C, rather than listed
+in the original paper (Table 2, C, A, B). The other columns of this
+table were determined statically from the data sets, so were not
+recalculated here -- the rejects column is the important column here.
+
+(Had I known more about generating tables in R at the time, I think my R
+code should have created this entire table.)
+
+\hypertarget{conclusions}{%
+\section{Conclusions}\label{conclusions}}
+
+It was relatively easy to recompute the results in this report, because
+of the stability of the R environment and its packaging system. Even its
+binary data format (.Rda) for storing objects was reusable over a 10
+year timescale. The largest challenge was the user issue of remembering
+what I had done to run the analysis and generate the results. Using
+mybinder.org was useful to iron out minor issues that others might face
+trying to run the software on their machine. In its current state, the
+repository requires R and make -- if make is unavailable, the scripts
+would need to be run by hand, which is not onerous, but writing them out
+explicitly might help those unfamiliar with Make syntax.
+
+\hypertarget{about-this-document}{%
+\section{About this document}\label{about-this-document}}
+
+This is a reproducible document that you can regenerate within
+mybinder.org by following the instructions on the README at the project
+home page, \url{http://github.com/sje30/rescience-hor}.
+
+If you are not using mybinder.org to recompile the document, then the
+following steps should work to generate the file
+\texttt{rescience-hor.pdf} on a unix machine with Make.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{source}\NormalTok{(}\StringTok{\textquotesingle{}install.R\textquotesingle{}}\NormalTok{)}
+\FunctionTok{system}\NormalTok{(}\StringTok{\textquotesingle{}make rescience{-}hor.pdf\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+
+\hypertarget{session-information}{%
+\section{Session Information}\label{session-information}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sessionInfo}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## R version 4.1.0 (2021-05-18)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Manjaro Linux
+## 
+## Matrix products: default
+## BLAS:   /usr/lib/libopenblasp-r0.3.17.so
+## LAPACK: /usr/lib/liblapack.so.3.10.0
+## 
+## locale:
+##  [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_GB.UTF-8    
+##  [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_GB.UTF-8   
+##  [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets 
+## [6] methods   base     
+## 
+## other attached packages:
+## [1] knitr_1.33
+## 
+## loaded via a namespace (and not attached):
+##  [1] compiler_4.1.0    magrittr_2.0.1    tools_4.1.0      
+##  [4] htmltools_0.5.1.1 yaml_2.2.1        stringi_1.6.2    
+##  [7] rmarkdown_2.8     stringr_1.4.0     xfun_0.23        
+## [10] digest_0.6.27     rlang_0.4.11      evaluate_0.14
+\end{verbatim}
+
+\hypertarget{acknowledgements}{%
+\section{Acknowledgements}\label{acknowledgements}}
+
+I thank the R core team for continuing to provide a robust computing
+environment that gave me confidence that this code was still work after
+10 years. Thanks also to Daniel Nüst and the mybinder team for helping
+me learn and use mybinder.
+
+\clearpage
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-Eglen2008-ca}{}}%
+Eglen, Stephen J, and James C T Wong. 2008. {``Spatial Constraints
+Underlying the Retinal Mosaics of Two Types of Horizontal Cells in Cat
+and Macaque.''} \emph{Vis. Neurosci.} 25 (2): 209--14.
+\url{https://doi.org/10.1017/S0952523808080176}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-Fortune1987-kg}{}}%
+Fortune, S. 1987. {``A Sweepline Algorithm for Voronoi Diagrams.''}
+\emph{Algorithmica} 2: 153--72.
+
+\leavevmode\vadjust pre{\hypertarget{ref-splancs}{}}%
+Rowlingson, Barry, and Peter Diggle. 2017. \emph{Splancs: Spatial and
+Space-Time Point Pattern Analysis}.
+\url{https://CRAN.R-project.org/package=splancs}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-Wassle2000-aa}{}}%
+Wässle, H, D M Dacey, T Haun, S Haverkamp, U Grünert, and B B Boycott.
+2000. {``The Mosaic of Horizontal Cells in the Macaque Monkey Retina:
+With a Comment on Biplexiform Ganglion Cells.''} \emph{Vis. Neurosci.}
+17 (4): 591--608. \url{https://doi.org/10.1017/s0952523800174097}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-Wassle1978-cd}{}}%
+Wässle, H, L Peichl, and B B Boycott. 1978. {``Topography of Horizontal
+Cells in the Retina of the Domestic Cat.''} \emph{Proc. R. Soc. Lond. B
+Biol. Sci.} 203 (1152): 269--91.
+
+\end{CSLReferences}
+
+\end{document}
