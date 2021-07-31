@@ -47,9 +47,9 @@ data:
 # Information about the original article that has been replicated
 replication:
  - cite: # Full textual citation
- - bib:  # Bibtex key (if any) in your bibliography file
- - url:  # URL to the PDF, try to link to a non-paywall version
- - doi:  # Regular digital object identifier
+ - bib:  Eglen2008-ca
+ - url:  https://arxiv.org/abs/1208.0986
+ - doi:  10.1017/S0952523808080176
 
 # Don't forget to surround abstract with double quotes
 abstract: "Three years have passed since ReScience published its first article
