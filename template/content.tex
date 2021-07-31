@@ -173,30 +173,36 @@ simulations were included in the source files.
 
 \section{Reproduction of Figure 1}
 
-\includegraphics{../hor_fieldA_col.pdf}
+\includegraphics[width=\textwidth]{../hor_fieldA_col.pdf}
 
 We also made a supplementary figure of all 3 fields.
 
 \section{Reproduction of Figure 2}
 
-\includegraphics{../eglen_fig2_col.pdf}
+\includegraphics[width=\textwidth]{../eglen_fig2_col.pdf}
 
 \section{Reproduction of Figure 3}
 
-\includegraphics{../eglen_fig3_col.pdf}
+\includegraphics[width=\textwidth]{../eglen_fig3_col.pdf}
 
 \hypertarget{reproduction-of-table-2}{%
 \section{Reproduction of Table 2}\label{reproduction-of-table-2}}
 
-Key column from table 2 is the rejects column which is shown here:
+Key column from table 2 is the rejects column which is reproduced in
+Table~\ref{tab:rep}.  The other columns of this table were determined
+statically from the data sets, so were not recalculated here.  (Had I
+known more about generating tables in R at the time, I think my R code
+should have created this entire table.)
+
 
 \begin{table}[h!]
   \centering
-  \begin{tabular}{lll}
+  \begin{tabular}{llll}
     \hline
-    $937 \pm 36$ & 15334 & 0.06\\
-    $7202 \pm 300$ & 17716 & 0.41\\
-    $242 \pm 10$ & 25500 & 0.01\\
+    field & rejects & n$_{\mathrm{pairs}}$ & rejects / n$_{\mathrm{pairs}}$ \\ \hline
+    C & $242 \pm 10$ & 25500 & 0.01\\
+    A & $937 \pm 36$ & 15334 & 0.06\\
+    B & $7202 \pm 300$ & 17716 & 0.41\\
     \hline
   \end{tabular}
   \caption{Reproduction of table 2 results}
@@ -205,13 +211,6 @@ Key column from table 2 is the rejects column which is shown here:
 
 %% copied from table2-rejects.txt
 
-Note the order of the three values is field A, B, C, rather than listed
-in the original paper (Table 2, C, A, B). The other columns of this
-table were determined statically from the data sets, so were not
-recalculated here -- the rejects column is the important column here.
-
-(Had I known more about generating tables in R at the time, I think my R
-code should have created this entire table.)
 
 \section{Conclusions}
 
