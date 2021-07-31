@@ -52,16 +52,13 @@ replication:
  - doi:  10.1017/S0952523808080176
 
 # Don't forget to surround abstract with double quotes
-abstract: "Three years have passed since ReScience published its first article
-           and since September 2015, things have been going steadily. We're
-           still alive, independent and without a budget. In the meantime, we
-           have published around 20 articles (mostly in computational
-           neuroscience & computational ecology) and the initial has grown
-           from around 10 to roughly 100 members (editors and reviewers), we
-           have advertised ReScience at several conferences worldwide, gave
-           some interviews and we published an article introducing ReScience in
-           PeerJ. Based on our experience at managing the journal during these
-           three years, we think the time is ripe for proposing some changes."
+abstract: "This paper describes the successful reproduction of a paper
+I co-authored in 2008 (Eglen and Wong, 2008), as part of the ten year
+reproducibility challenge.  This work was done in the R programming
+language, and thanks to the stability of R, the code could be re-run
+without any problems.  In this paper I discuss the scientific
+background and the steps needed to recreate the key results from our
+2008 paper."
 
 # Bibliography file (yours)
 bibliography: bibliography.bib
