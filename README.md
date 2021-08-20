@@ -1,5 +1,9 @@
 # Rescience project
 
+This is the home page for the Rescience 10-year reproduction
+challenge, where I took one of my earlier papers (Eglen & Wong 2008)
+and reproduced it 12 (and now 13) years later.  The details of the
+Rescience paper should be available via: https://github.com/ReScience/submissions/issues/34
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sje30/rescience-hor/master?urlpath=rstudio)
 
