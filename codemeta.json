@@ -1,0 +1,23 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "license": "https://spdx.org/licenses/MIT",
+    "codeRepository": "https://github.com/sje30/rescience-hor",
+    "dateCreated": "2021-08-20",
+    "datePublished": "2021-08-20",
+    "name": "Simulating retinal mosaics",
+    "version": "v1",
+    "description": "This software bundle reproduces my research paper from 2008, as part of the Rescience 10 year challenge",
+    "applicationCategory": "Neuroscience",
+    "programmingLanguage": [
+        "R"
+    ],
+    "author": [
+        {
+            "@type": "Person",
+            "givenName": "Stephen",
+            "familyName": "Eglen",
+            "email": "sje30@cam.ac.uk"
+        }
+    ]
+}
